@@ -15,7 +15,10 @@
 - **Waktu tampil gambar utama di HP turun dari 71,9 detik ke 9,1 detik** (−87%).
 - **7 plugin diperbarui**, dan jumlah plugin berstatus *Vulnerable* turun dari 9 ke 6.
 - **Konfigurasi server diperbaiki.** Library gambar (GD/Imagick) dan extension `dom` sebelumnya tidak aktif.
-- **Temuan kritis:** email notifikasi website kemungkinan **gagal terkirim sejak Juni 2026** (12 email gagal dalam 30 hari terakhir). Pemulihannya perlu diverifikasi.
+- **Temuan kritis (hasil audit database):** **semua link WhatsApp, telepon, dan email di footer (tampil di seluruh halaman) dan di halaman Kontak mengarah ke nomor/email palsu dari template** (`123-456-7890`, `213-200-5078`, `contact@mysite.com`, `kevinclarkfit@training.com`). Pengunjung yang mengklik tidak pernah sampai ke UOS.
+- **Formulir Kontak belum pernah menghasilkan calon asli.** Dari 102 kiriman (Jun 2025 – Sep 2026): 3 tes developer, 99 spam. Tidak ada satu pun yang pernah dibuka di WP Admin.
+- **Email website gagal sejak Juni 2026** (*Could not connect to SMTP host*), sesuai dengan tanggal SSL kedaluwarsa. Sejak Juni 2025 notifikasi ke `admin@uos.co.id` juga selalu gagal karena **mailbox tersebut tidak ada**.
+- **Tidak ditemukan malware.** 3.224 file inti WordPress dan 9 plugin gratis identik dengan versi resmi.
 
 ---
 
@@ -96,12 +99,38 @@ Skor risiko keamanan WP Toolkit: **0,4 → 0,3**.
 
 ## 6. Temuan Penting untuk Disampaikan ke UOS
 
-1. **Email formulir kemungkinan gagal sejak Juni 2026.** WP Mail SMTP mengirim lewat `mail.uos.co.id` (SSL port 465). Sertifikat subdomain itu ikut kedaluwarsa pada 31 Mei, dan setelah SSL diperbarui hari ini pengiriman **seharusnya pulih**. Masih perlu dibuktikan dengan *Email Test*. Kiriman formulir Elementor Pro yang gagal terkirim lewat email kemungkinan **masih tersimpan di menu Elementor → Submissions** dan bisa diserahkan ke tim UOS.
-2. **Website sempat tidak bisa ditemukan di Google** karena pengaturan *noindex*. Sudah dibuka hari ini.
-3. **Lisensi Crocoblock** (JetElements, JetBlocks, JetTricks, JetThemeCore) perlu dikonfirmasi. Tanpa lisensi, celah keamanannya tidak bisa ditutup.
-4. **Nomor telepon asing** `tel:213-200-5078` (format AS, kemungkinan sisa template) terdeteksi pada salah satu link di halaman Kontak. Perlu dicari dan diganti.
-5. **Perpanjangan otomatis mati** untuk domain (5 Mei 2027), hosting (6 Mei 2027), dan SSL Sectigo (10 Jul 2027).
-6. **Subdomain lama 2021** (cctv, hotspot, laporan, jadwal, cek, afiahkost) tercatat di riwayat SSL. Perlu dicek apakah masih aktif.
+### Hasil audit backup (database + file, 28 Sep 2026)
+
+1. **Link kontak mengarah ke data template (KRITIS).**
+
+   | Lokasi | Teks yang tampil | Link sebenarnya |
+   |---|---|---|
+   | Footer #194 (semua halaman) | Email: office@uos.co.id | `mailto:contact@mysite.com` |
+   | Footer #194 | WA: +62 818-0860-3153 | `tel:123-456-7890` |
+   | Footer #194 | WA: +62 816-709-174 | `tel:123-456-7890` |
+   | Footer #194 | Phone: +62 21-8428-3661 | `tel:123-456-7890` |
+   | Kontak (widget icon-list `19c73afd`) | +62 818-0860-3153 | `tel:213-200-5078` |
+   | Kontak | +62 816-709-174 | `tel:213-200-5078` |
+   | Kontak | +62 21-8428-3661 | `tel:213-200-5078` |
+   | Kontak | office@uos.co.id | `mailto:kevinclarkfit@training.com` |
+
+   Hanya tombol WhatsApp di Beranda (`wa.me/6281808603153`) yang benar. Perbaikan: Elementor → edit Footer dan halaman Kontak → ganti link tiap item menjadi `https://wa.me/6281808603153`, `https://wa.me/62816709174`, `tel:+622184283661`, dan `mailto:office@uos.co.id`.
+2. **Formulir Kontak (Elementor Pro, "Contact Us") belum pernah menghasilkan calon asli.** 102 kiriman: 3 tes developer (Jun 2025) dan 99 spam (penawaran jasa/backlink/AI berbahasa Inggris). Semua berstatus *belum dibaca*. Formulir juga **tanpa proteksi anti-spam** (reCAPTCHA/honeypot).
+3. **Riwayat kegagalan email (log WP Mail SMTP):**
+   - Jun 2025 – Mei 2026: notifikasi ke `admin@uos.co.id` gagal ratusan kali (*No such user*). **Email admin WordPress mengarah ke mailbox yang tidak ada.** Ganti di Settings → General → *Administration Email Address*, atau buat mailbox tersebut di cPanel.
+   - Feb 2026 dan Jun – Sep 2026: *Could not connect to SMTP host*. Periode Juni–September cocok dengan SSL `mail.uos.co.id` yang kedaluwarsa, dan seharusnya pulih setelah SSL diperbarui (perlu dibuktikan dengan *Email Test*).
+4. **Halaman publik yang seharusnya tidak tampil:** `uos.co.id/sample-page` (halaman bawaan WordPress) dan `uos.co.id/template` (berisi teks *Lorem ipsum*). Karena blokir Google sudah dibuka, keduanya bisa ikut terindeks. Ubah ke *Draft*.
+5. **Dua akun Administrator:** `SuperAdmin` (domain uos.co.id, 20 Mei 2025) dan `admin` (Gmail, 20 Jul 2025). Konfirmasi ke UOS siapa pemilik akun `admin`. Kalau vendor lama, hapus atau turunkan hak aksesnya.
+6. **Keamanan file:** tidak ada malware. File inti WordPress 6.7.9 (3.224 file) dan 9 plugin gratis identik dengan versi resmi wordpress.org. Plugin premium (Elementor Pro, Jet, WP Rocket, GP Premium) tidak mengandung pola kode berbahaya. Banyak file `error_log` di folder inti berasal dari bot yang mencoba mengakses file secara langsung (tidak berbahaya). Hardening yang disarankan: tambahkan `DISALLOW_FILE_EDIT` di wp-config.php, dan hapus duplikasi definisi `WP_DEBUG`.
+
+### Temuan lain
+
+7. **Website sempat tidak bisa ditemukan di Google** karena pengaturan *noindex*. Sudah dibuka hari ini.
+8. **Lisensi Crocoblock** (JetElements, JetBlocks, JetTricks, JetThemeCore) perlu dikonfirmasi. Tanpa lisensi, celah keamanannya tidak bisa ditutup.
+9. **Perpanjangan otomatis mati** untuk domain (5 Mei 2027), hosting (6 Mei 2027), dan SSL Sectigo (10 Jul 2027).
+10. **Subdomain lama 2021** (cctv, hotspot, laporan, jadwal, cek, afiahkost) tercatat di riwayat SSL. Perlu dicek apakah masih aktif.
+
+> Catatan privasi: backup diunduh sementara dari Google Drive SITUNEO untuk audit, lalu dihapus dari lingkungan analisis setelah selesai. Laporan ini hanya memuat angka agregat, tanpa data pribadi pengirim formulir.
 
 ---
 
@@ -110,8 +139,10 @@ Skor risiko keamanan WP Toolkit: **0,4 → 0,3**.
 ### Sisa scope Rp 1,5 jt
 | # | Pekerjaan | Catatan |
 |---|---|---|
-| 1 | **Verifikasi email** (WP Mail SMTP → Tools → Email Test) | Prioritas tertinggi |
-| 2 | Cek **Elementor → Submissions** dan tujuan email formulir Kontak (*Actions After Submit → Email → To*) | Kemungkinan ada data calon yang bisa diselamatkan |
+| 1 | **Perbaiki link WA/telepon/email** di Footer #194 dan halaman Kontak | Prioritas tertinggi. Semua klik kontak saat ini hilang. |
+| 2 | **Verifikasi email** (WP Mail SMTP → Tools → Email Test) dan ganti *Administration Email* dari `admin@uos.co.id` | Pastikan notifikasi formulir sampai |
+| 2a | Tambahkan anti-spam pada formulir (Elementor → Settings → Integrations → reCAPTCHA v3, atau field *Honeypot*) | 99 dari 102 kiriman adalah spam |
+| 2b | Ubah `sample-page` dan `template` ke Draft; konfirmasi akun admin `admin` | Kebersihan SEO dan keamanan |
 | 3 | **Formulir di halaman depan** | Salin formulir Kontak ke Home01. Kolom: Nama, WhatsApp, Asal Sekolah, Program, Orang tua/Siswa, Persetujuan (UU PDP). Aktifkan *Collect Submissions*. |
 | 4 | **Open Graph** (preview WhatsApp) | Pasang Yoast SEO, gambar 1200×630, SEO title dan meta description Beranda |
 | 5 | **GA4 + Google Tag Manager** | Butuh akun Google milik UOS. Pixel Meta/TikTok menunggu akun iklan. |
