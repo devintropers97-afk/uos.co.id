@@ -19,7 +19,7 @@
 | 5 | Update plugin aman (7 plugin) | ✅ Selesai | – |
 | 6 | Konfigurasi server (PHP Selector 8.1 + gd/imagick/dom) | ✅ Selesai | – |
 | 7 | Backup penuh + audit keamanan | ✅ Selesai | – |
-| 8 | **Perbaikan link WA/telepon/email** | ⏳ Belum | 30 menit |
+| 8 | Perbaikan link WA/telepon/email (footer + Kontak) | ✅ Selesai (29 Sep, terverifikasi live) | – |
 | 9 | **Email notifikasi + test** | ⏳ Belum | 30 menit |
 | 10 | **Anti-spam formulir** | ⏳ Belum | 20 menit |
 | 11 | **Formulir di Beranda** | ⏳ Belum | 1–2 jam |
