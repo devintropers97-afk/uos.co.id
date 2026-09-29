@@ -20,7 +20,7 @@
 | 6 | Konfigurasi server (PHP Selector 8.1 + gd/imagick/dom) | ✅ Selesai | – |
 | 7 | Backup penuh + audit keamanan | ✅ Selesai | – |
 | 8 | Perbaikan link WA/telepon/email (footer + Kontak) | ✅ Selesai (29 Sep, terverifikasi live) | – |
-| 9 | **Email notifikasi + test** | ⏳ Belum | 30 menit |
+| 9 | Email notifikasi + test (SMTP OK, form Kontak → office@uos.co.id, Reply-To pengunjung, timezone Jakarta) | ✅ Selesai (29 Sep, email tes masuk Inbox) | – |
 | 10 | **Anti-spam formulir** | ⏳ Belum | 20 menit |
 | 11 | **Formulir di Beranda** | ⏳ Belum | 1–2 jam |
 | 12 | **Tampilan link WhatsApp (Open Graph)** | ⏳ Belum | 1 jam |
