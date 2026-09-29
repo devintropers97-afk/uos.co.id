@@ -23,7 +23,7 @@
 | 9 | Email notifikasi + test (SMTP OK, form Kontak → office@uos.co.id, Reply-To pengunjung, timezone Jakarta) | ✅ Selesai (29 Sep, email tes masuk Inbox) | – |
 | 10 | Anti-spam formulir (Honeypot) + pesan formulir bahasa Indonesia | ✅ Selesai (29 Sep, terverifikasi live) | – |
 | 11 | Formulir di Beranda (bagian "Hubungi Kami" yang sebelumnya tanpa form) + link WA di kotak "Chat WA Kami" | ✅ Selesai (29 Sep, tes kirim OK) | – |
-| 12 | **Tampilan link WhatsApp (Open Graph)** | ⏳ Belum | 1 jam |
+| 12 | Tampilan link WhatsApp (Open Graph) via Rank Math (Yoast tidak kompatibel WP 6.7.9) + Local SEO data perusahaan | ✅ Selesai (29 Sep, tes WA OK) | – |
 | 13 | **GA4 + Google Tag Manager** | ⏳ Menunggu akses Google UOS | 1 jam |
 | 14 | Meta & TikTok Pixel | ⏳ Menunggu akun iklan UOS | 30 menit |
 | 15 | Bersihkan 322 komentar spam + tutup komentar & pingback | ✅ Selesai (29 Sep) | – |
