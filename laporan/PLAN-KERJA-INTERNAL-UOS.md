@@ -26,8 +26,8 @@
 | 12 | **Tampilan link WhatsApp (Open Graph)** | ⏳ Belum | 1 jam |
 | 13 | **GA4 + Google Tag Manager** | ⏳ Menunggu akses Google UOS | 1 jam |
 | 14 | Meta & TikTok Pixel | ⏳ Menunggu akun iklan UOS | 30 menit |
-| 15 | Bersihkan komentar spam + tutup komentar | ⏳ Belum | 15 menit |
-| 16 | Nonaktifkan halaman contoh (sample-page, template) | ⏳ Belum | 5 menit |
+| 15 | Bersihkan 322 komentar spam + tutup komentar & pingback | ✅ Selesai (29 Sep) | – |
+| 16 | Nonaktifkan halaman contoh (sample-page, template → Draft, kini 404) | ✅ Selesai (29 Sep, terverifikasi live) | – |
 | 17 | Uji akhir + PageSpeed akhir + laporan serah terima | ⏳ Belum | 1 jam |
 
 **Total sisa kerja: ±1–1,5 hari kerja efektif.**
