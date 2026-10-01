@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Laporan Perbaikan Website uos.co.id – Tahap 1</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+  :root{
+    --navy:#0B1F3A; --blue:#1565C0; --cyan:#00A8CC; --ink:#1F2937; --muted:#6B7280;
+    --line:#E5E7EB; --soft:#F3F7FB; --green:#15803D; --greenbg:#E8F6EE; --amber:#B45309; --amberbg:#FEF3E2; --red:#B91C1C; --redbg:#FDECEC;
+  }
+  *{box-sizing:border-box}
+  body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);font-size:10.3pt;line-height:1.5;margin:0;background:#fff}
+  h1,h2,h3{color:var(--navy);margin:0}
+  h2{font-size:15pt;margin:0 0 8px;padding-top:4px}
+  h2 .num{display:inline-block;background:var(--navy);color:#fff;border-radius:6px;font-size:10pt;padding:2px 8px;margin-right:8px;vertical-align:3px}
+  h3{font-size:11pt;margin:14px 0 6px}
+  p{margin:0 0 8px}
+  .muted{color:var(--muted)}
+  section{margin:0 0 20px}
+  .break{page-break-before:always}
+  .avoid{page-break-inside:avoid}
+
+  /* cover */
+  .cover{background:linear-gradient(135deg,var(--navy) 0%,#123A6B 60%,var(--blue) 100%);color:#fff;border-radius:14px;padding:30px 32px;margin-bottom:22px;position:relative;overflow:hidden}
+  .cover:after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;background:rgba(0,168,204,.25)}
+  .brand{font-weight:800;letter-spacing:.14em;font-size:9pt;color:#9FE3F2}
+  .cover h1{color:#fff;font-size:22pt;line-height:1.2;margin:10px 0 6px}
+  .cover .sub{font-size:11pt;color:#DCE8F7}
+  .meta{display:flex;gap:26px;margin-top:18px;font-size:9pt;color:#DCE8F7;flex-wrap:wrap}
+  .meta b{display:block;color:#fff;font-size:10pt}
+
+  /* KPI */
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:6px 0 4px}
+  .kpi{background:var(--soft);border:1px solid #DDE7F2;border-radius:10px;padding:10px 12px}
+  .kpi .v{font-size:16pt;font-weight:800;color:var(--blue);line-height:1.1}
+  .kpi .l{font-size:8.6pt;color:var(--muted);margin-top:3px}
+
+  table{width:100%;border-collapse:collapse;margin:6px 0 4px;font-size:9.4pt}
+  th{background:var(--navy);color:#fff;text-align:left;font-weight:600;padding:7px 9px}
+  td{padding:7px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr:nth-child(even) td{background:#FAFBFD}
+  td.r,th.r{text-align:right;white-space:nowrap}
+  .tag{display:inline-block;border-radius:999px;padding:1px 9px;font-size:8.4pt;font-weight:700;white-space:nowrap}
+  .ok{background:var(--greenbg);color:var(--green)}
+  .wip{background:var(--amberbg);color:var(--amber)}
+  .crit{background:var(--redbg);color:var(--red)}
+  .up{color:var(--green);font-weight:700}
+  .box{border-radius:10px;padding:11px 14px;margin:8px 0}
+  .box.info{background:var(--soft);border-left:4px solid var(--blue)}
+  .box.warn{background:var(--amberbg);border-left:4px solid var(--amber)}
+  .box.crit{background:var(--redbg);border-left:4px solid var(--red)}
+  ul{margin:4px 0 8px 18px;padding:0} li{margin:2px 0}
+  .tier{border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:10px 0}
+  .tier h3{margin-top:0}
+  .price{font-weight:700;color:var(--navy);white-space:nowrap}
+  .foot{margin-top:18px;border-top:2px solid var(--navy);padding-top:10px;font-size:9pt;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .small{font-size:8.6pt}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="brand">SITUNEO DIGITAL SOLUSI INDONESIA</div>
+  <h1>Laporan Perbaikan Website<br>uos.co.id — Tahap 1</h1>
+  <div class="sub">Hasil pekerjaan, temuan penting, dan rekomendasi langkah berikutnya</div>
+  <div class="meta">
+    <div>Disiapkan untuk<b>PT Unggulan Operator Sinergis (UOS)</b></div>
+    <div>Tanggal<b>28 September 2026</b></div>
+    <div>Referensi<b>Proposal SITUNEO × UOS, 19 Sep 2026</b></div>
+  </div>
+</div>
+
+<section>
+  <h2><span class="num">1</span>Ringkasan</h2>
+  <p>UOS memesan layanan <b>Perbaikan Situs uos.co.id (Rp1.500.000)</b> sesuai proposal hal. 13. Pada tahap pertama, kami memulihkan keamanan situs, membuka kembali situs untuk Google, memperbaiki konfigurasi server, dan mempercepat halaman secara signifikan.</p>
+  <div class="kpis">
+    <div class="kpi"><div class="v">87%</div><div class="l">berat gambar berkurang (hemat 44,75 MB)</div></div>
+    <div class="kpi"><div class="v">72→9 dtk</div><div class="l">waktu tampil gambar utama di HP</div></div>
+    <div class="kpi"><div class="v">Aktif ✓</div><div class="l">sertifikat keamanan (sempat mati ±120 hari)</div></div>
+    <div class="kpi"><div class="v">9 → 6</div><div class="l">plugin berstatus rentan (7 plugin diperbarui)</div></div>
+  </div>
+  <div class="box crit avoid"><b>Temuan paling penting:</b> seluruh tombol WhatsApp, telepon, dan email di <b>footer</b> (tampil di semua halaman) dan di <b>halaman Kontak</b> ternyata mengarah ke nomor dan email contoh dari template, bukan ke UOS. Pengunjung yang mengklik tidak pernah sampai ke tim UOS. Perbaikan ini kami jadwalkan sebagai prioritas pertama tahap 2.</div>
+</section>
+
+<section>
+  <h2><span class="num">2</span>Status Lingkup Pekerjaan (sesuai proposal)</h2>
+  <table>
+    <tr><th style="width:34%">Pekerjaan</th><th>Hasil</th><th class="r">Status</th></tr>
+    <tr><td><b>Sertifikat keamanan (SSL) &amp; HTTPS</b></td><td>Sertifikat yang kedaluwarsa sejak 31 Mei 2026 sudah aktif kembali untuk 10 domain/subdomain (termasuk email). Peringatan "Tidak aman" di browser hilang.</td><td class="r"><span class="tag ok">Selesai</span></td></tr>
+    <tr><td><b>Kompres gambar halaman depan</b></td><td>65 gambar dikonversi ke format WebP, total hemat 44,75 MB (87%). Gambar baru otomatis ikut dikonversi.</td><td class="r"><span class="tag ok">Selesai</span></td></tr>
+    <tr><td><b>Formulir di halaman depan</b></td><td>Kolom Nama, WhatsApp, Asal Sekolah, Program, dan persetujuan data, plus perlindungan anti-spam.</td><td class="r"><span class="tag wip">Tahap 2</span></td></tr>
+    <tr><td><b>Tampilan tautan di WhatsApp</b></td><td>Gambar, judul, dan deskripsi saat link uos.co.id dibagikan.</td><td class="r"><span class="tag wip">Tahap 2</span></td></tr>
+    <tr><td><b>GA4, Tag Manager &amp; pixel iklan</b></td><td>Menunggu akses akun Google milik UOS. Meta/TikTok Pixel dipasang setelah akun iklan tersedia.</td><td class="r"><span class="tag wip">Menunggu akses</span></td></tr>
+  </table>
+</section>
+
+<section class="avoid">
+  <h3>Rincian layanan Perbaikan &amp; Optimasi Website (Rp1.500.000)</h3>
+  <table>
+    <tr><th style="width:50%">✅ Termasuk dalam paket</th><th>❌ Tidak termasuk (layanan terpisah)</th></tr>
+    <tr><td>
+      <ul>
+        <li>Pemulihan sertifikat keamanan (SSL) &amp; pengalihan ke HTTPS</li>
+        <li>Kompresi &amp; konversi gambar ke WebP</li>
+        <li>Optimasi kecepatan (cache, minify, pemuatan CSS/JS)</li>
+        <li>Formulir pendaftaran di halaman depan + anti-spam</li>
+        <li>Tampilan tautan saat dibagikan di WhatsApp</li>
+        <li>Pemasangan GA4, Google Tag Manager, Meta &amp; TikTok Pixel <span class="muted small">(pixel dipasang setelah akun iklan tersedia)</span></li>
+        <li>Perbaikan link WhatsApp, telepon &amp; email yang salah</li>
+        <li>Pengaturan email notifikasi formulir</li>
+        <li>Update plugin yang aman diperbarui, backup &amp; audit keamanan</li>
+        <li>Pembersihan komentar spam &amp; halaman contoh</li>
+        <li>Laporan hasil sebelum–sesudah</li>
+      </ul>
+    </td><td>
+      <ul>
+        <li>Desain ulang tampilan (redesign) — lihat bagian 9</li>
+        <li>Landing page program</li>
+        <li>Pembuatan akun &amp; pengelolaan iklan</li>
+        <li>CRM &amp; CRM AI WhatsApp</li>
+        <li>Pembuatan konten, artikel &amp; foto baru</li>
+        <li>Update besar WordPress 7 &amp; Elementor 4 via staging</li>
+        <li>Biaya lisensi plugin premium (Crocoblock) ke vendor</li>
+        <li>Kebijakan Privasi &amp; Syarat Ketentuan</li>
+        <li>Pemeliharaan bulanan setelah serah terima</li>
+      </ul>
+    </td></tr>
+  </table>
+</section>
+
+<section class="avoid">
+  <h2><span class="num">3</span>Pekerjaan Tambahan (tanpa biaya tambahan)</h2>
+  <table>
+    <tr><th style="width:34%">Pekerjaan</th><th>Dampak untuk UOS</th></tr>
+    <tr><td><b>Membuka blokir Google</b></td><td>Situs sebelumnya diatur agar <b>tidak diindeks Google</b>. Sekarang uos.co.id bisa muncul di hasil pencarian.</td></tr>
+    <tr><td><b>Perbaikan konfigurasi server</b></td><td>Library pengolah gambar (GD, Imagick) dan komponen <i>dom</i> sebelumnya tidak aktif, sehingga WordPress tidak bisa membuat versi kecil foto. Sudah diaktifkan bersama tim Rumahweb.</td></tr>
+    <tr><td><b>Update keamanan 7 plugin</b></td><td>Termasuk WP Rocket, WPForms, dan Backuply yang sebelumnya berstatus rentan. Skor risiko keamanan turun dari 0,4 ke 0,3.</td></tr>
+    <tr><td><b>Optimasi cache &amp; file</b></td><td>Minify CSS/JS, penundaan JavaScript, dan pemuatan CSS asinkron. Tampilan situs tetap utuh.</td></tr>
+    <tr><td><b>Backup penuh &amp; audit keamanan</b></td><td>Backup sebelum pengerjaan (263 MB) disimpan. Pemeriksaan file tidak menemukan malware: file inti WordPress identik dengan versi resmi.</td></tr>
+  </table>
+</section>
+
+<section class="avoid">
+  <h2><span class="num">4</span>Hasil Kecepatan: Sebelum → Sesudah</h2>
+  <p class="muted small">Sumber: Google PageSpeed Insights, 28 Sep 2026 (sebelum: 14.11 WIB, sesudah: 17.39 WIB). Skor PageSpeed dapat bervariasi antar pengujian.</p>
+  <table>
+    <tr><th>Ukuran</th><th class="r">HP sebelum</th><th class="r">HP sesudah</th><th class="r">Desktop sebelum</th><th class="r">Desktop sesudah</th></tr>
+    <tr><td>Waktu tampil gambar utama (LCP)</td><td class="r">71,9 dtk</td><td class="r up">9,1 dtk</td><td class="r">9,5 dtk</td><td class="r up">4,1 dtk</td></tr>
+    <tr><td>Halaman terasa siap (Speed Index)</td><td class="r">36,0 dtk</td><td class="r up">6,6 dtk</td><td class="r">9,5 dtk</td><td class="r up">3,2 dtk</td></tr>
+    <tr><td>Skor Performance</td><td class="r">65</td><td class="r up">69</td><td class="r">65</td><td class="r up">71</td></tr>
+    <tr><td>Skor Best Practices</td><td class="r">96</td><td class="r up">100</td><td class="r">100</td><td class="r">100</td></tr>
+  </table>
+  <div class="box info">Di HP, gambar utama yang sebelumnya baru muncul setelah <b>lebih dari 1 menit</b> kini tampil dalam <b>±9 detik</b>. Target berikutnya adalah di bawah 4 detik, dengan menyederhanakan slider khusus tampilan HP (lihat rekomendasi).</div>
+</section>
+
+<section class="break">
+  <h2><span class="num">5</span>Temuan Penting yang Perlu Perhatian</h2>
+  <table>
+    <tr><th style="width:30%">Temuan</th><th>Penjelasan</th><th class="r">Tingkat</th></tr>
+    <tr><td><b>Link kontak mengarah ke data template</b></td><td>Tombol WA, telepon, dan email di footer dan halaman Kontak mengarah ke nomor/email contoh (misalnya 123-456-7890). Hanya tombol WhatsApp di Beranda yang benar.</td><td class="r"><span class="tag crit">Kritis</span></td></tr>
+    <tr><td><b>Formulir Kontak belum pernah menerima calon</b></td><td>Sejak Juni 2025 tercatat 102 kiriman: 3 kiriman uji coba dan 99 spam (penawaran jasa dari luar negeri). Formulir belum punya perlindungan anti-spam.</td><td class="r"><span class="tag crit">Kritis</span></td></tr>
+    <tr><td><b>Email notifikasi website</b></td><td>Email admin WordPress diarahkan ke <i>admin@uos.co.id</i>, mailbox yang tidak ada, sehingga notifikasi selalu gagal. Pengiriman email juga sempat terhenti Juni–September karena sertifikat keamanan mati.</td><td class="r"><span class="tag wip">Tinggi</span></td></tr>
+    <tr><td><b>Plugin premium tanpa lisensi aktif</b></td><td>JetElements, JetBlocks, JetTricks, dan JetThemeCore (Crocoblock) masih berstatus rentan dan tidak bisa diperbarui tanpa lisensi.</td><td class="r"><span class="tag wip">Tinggi</span></td></tr>
+    <tr><td><b>Versi WordPress &amp; Elementor tertinggal</b></td><td>WordPress 6.7.9 (terbaru 7.1.2) dan Elementor 3.30 (terbaru 4.3). Pembaruan besar ini perlu diuji dulu di salinan situs (<i>staging</i>) agar tampilan tidak rusak.</td><td class="r"><span class="tag wip">Tinggi</span></td></tr>
+    <tr><td><b>Akun administrator kedua</b></td><td>Selain akun utama, ada akun admin bernama "admin" (Gmail) sejak Juli 2025. Mohon konfirmasi pemiliknya. Kalau milik vendor lama, sebaiknya dihapus.</td><td class="r"><span class="tag wip">Sedang</span></td></tr>
+    <tr><td><b>Halaman contoh masih tampil</b></td><td>Halaman <i>/sample-page</i> dan <i>/template</i> (berisi teks contoh) bisa diakses publik dan diindeks Google.</td><td class="r"><span class="tag wip">Sedang</span></td></tr>
+    <tr><td><b>322 komentar spam</b></td><td>Semua komentar berisi link mencurigakan. Perlu dibersihkan, dan fitur komentar sebaiknya ditutup.</td><td class="r"><span class="tag wip">Sedang</span></td></tr>
+    <tr><td><b>Perpanjangan otomatis mati</b></td><td>Domain (5 Mei 2027), hosting (6 Mei 2027), dan SSL berbayar (10 Jul 2027) belum diatur perpanjangan otomatis. Risikonya situs mati tanpa disadari, seperti kejadian SSL tahun ini.</td><td class="r"><span class="tag wip">Sedang</span></td></tr>
+  </table>
+</section>
+
+<section class="avoid">
+  <h2><span class="num">6</span>Rencana Tahap 2</h2>
+  <ol style="margin:4px 0 8px 18px;padding:0">
+    <li>Memperbaiki semua link WhatsApp, telepon, dan email di footer dan halaman Kontak</li>
+    <li>Memasang perlindungan anti-spam pada formulir, mengarahkan notifikasi ke email UOS yang aktif, lalu menguji pengiriman email</li>
+    <li>Membuat formulir pendaftaran di halaman depan</li>
+    <li>Memasang tampilan tautan WhatsApp (gambar, judul, deskripsi)</li>
+    <li>Memasang GA4 dan Google Tag Manager (setelah akses diberikan)</li>
+    <li>Menonaktifkan halaman contoh dan membersihkan komentar spam</li>
+  </ol>
+  <h3>Yang kami butuhkan dari UOS</h3>
+  <table>
+    <tr><th style="width:40%">Kebutuhan</th><th>Keterangan</th></tr>
+    <tr><td>Akses akun Google milik UOS</td><td>Untuk GA4 dan Tag Manager. Data statistik tetap milik UOS.</td></tr>
+    <tr><td>Email aktif penerima formulir</td><td>Misalnya office@uos.co.id atau email tim pendaftaran</td></tr>
+    <tr><td>Nomor WhatsApp resmi yang dipakai</td><td>Konfirmasi: 0818-0860-3153 dan 0816-709-174 masih aktif?</td></tr>
+    <tr><td>Status lisensi Crocoblock</td><td>Apakah UOS atau vendor sebelumnya memiliki akun lisensi?</td></tr>
+    <tr><td>Konfirmasi akun admin "admin"</td><td>Siapa pemiliknya, dan boleh dihapus atau tidak?</td></tr>
+  </table>
+</section>
+
+<section class="break">
+  <h2><span class="num">7</span>Rencana ke Depan: Peta Jalan Website UOS</h2>
+  <p>Tujuan akhirnya: <b>uos.co.id menjadi saluran pendaftaran yang aktif</b>, dari iklan dan pencarian Google sampai calon siswa tercatat dan ditindaklanjuti tim UOS.</p>
+  <table>
+    <tr><th style="width:17%">Waktu</th><th style="width:27%">Fokus</th><th>Pekerjaan</th><th style="width:18%">Hasil yang diharapkan</th></tr>
+    <tr><td><b>Minggu 1–2</b><br><span class="small muted">(Tahap 2, dalam paket)</span></td><td>Menutup kebocoran calon</td><td>Perbaiki link WA/telepon/email · formulir beranda + anti-spam · email notifikasi aktif · tampilan link WhatsApp · GA4 &amp; Tag Manager · hapus halaman contoh &amp; spam</td><td>Setiap klik dan isian formulir sampai ke tim UOS dan mulai terukur</td></tr>
+    <tr><td><b>Minggu 3–4</b></td><td>Keamanan &amp; kepatuhan</td><td>Kebijakan Privasi &amp; S&amp;K · update WordPress 7 &amp; Elementor 4 via staging · lisensi atau pengganti plugin Crocoblock · backup otomatis · uji menyeluruh</td><td>Situs aman, patuh UU PDP, siap menerima trafik iklan</td></tr>
+    <tr><td><b>Bulan 2</b></td><td>Mulai menarik calon</td><td>Landing page Kuliah D3 Plus · akun iklan atas nama PT UOS · Google &amp; Meta Ads (anggaran awal kecil, ±5 hari uji) · CRM calon siswa · slider ringan khusus HP</td><td>Calon pertama dari iklan tercatat di CRM, waktu tampil HP &lt; 4 detik</td></tr>
+    <tr><td><b>Bulan 3</b></td><td>Skala &amp; otomasi</td><td>Landing page Study Tour &amp; Kursus Mandarin · TikTok Ads · CRM AI WhatsApp (asisten 24 jam) · laporan mingguan</td><td>Respons ke calon dalam hitungan detik, biaya per calon terpantau</td></tr>
+    <tr><td><b>Bulan 4–6</b></td><td>Pertumbuhan organik</td><td>SEO Growth · artikel blog rutin · Google Business Profile · kelola Instagram, Facebook &amp; YouTube · email marketing untuk calon yang belum siap</td><td>Calon datang juga dari Google tanpa biaya iklan, menjelang musim pendaftaran</td></tr>
+  </table>
+  <h3>Target yang dipantau setiap bulan</h3>
+  <table>
+    <tr><th>Indikator</th><th>Kondisi sekarang</th><th>Target 3 bulan</th></tr>
+    <tr><td>Calon asli yang masuk lewat website</td><td>0 (sejak Juni 2025)</td><td>Tercatat dan bertambah setiap minggu</td></tr>
+    <tr><td>Waktu tampil gambar utama di HP</td><td>9,1 detik</td><td>&lt; 4 detik</td></tr>
+    <tr><td>Kiriman spam di formulir</td><td>99 dari 102 kiriman</td><td>Hampir nol (anti-spam aktif)</td></tr>
+    <tr><td>Plugin berstatus rentan</td><td>6</td><td>0</td></tr>
+    <tr><td>Kunjungan &amp; sumber trafik</td><td>Belum terukur</td><td>Terukur penuh di GA4</td></tr>
+  </table>
+</section>
+
+<section class="break">
+  <h2><span class="num">8</span>Rekomendasi Layanan SITUNEO</h2>
+  <p>Fondasi situs kini siap menerima pengunjung. Berikut rekomendasi yang kami susun berdasarkan prioritas, dengan <b>harga dari daftar resmi SITUNEO</b> (situneo.my.id).</p>
+
+  <div class="tier avoid">
+    <h3>Prioritas 1 — Keamanan &amp; kesiapan sebelum iklan</h3>
+    <table>
+      <tr><th>Layanan</th><th>Alasan</th><th class="r">Biaya</th></tr>
+      <tr><td>Kebijakan Privasi &amp; Syarat Ketentuan</td><td>Formulir akan mengumpulkan data siswa dan orang tua, sehingga wajib sesuai UU Pelindungan Data Pribadi.</td><td class="r price">Rp150.000</td></tr>
+      <tr><td>Perbaikan Website Ringan<br><span class="muted small">(update WordPress 7 &amp; Elementor 4 via staging)</span></td><td>Menutup celah keamanan yang tersisa tanpa merusak tampilan.</td><td class="r price">Rp500.000</td></tr>
+      <tr><td>Backup &amp; Recovery</td><td>Backup otomatis terakhir tercatat 419 hari lalu. Dengan layanan ini situs selalu bisa dipulihkan.</td><td class="r price">Rp100.000/bln</td></tr>
+      <tr><td>Uji Menyeluruh Website</td><td>Pengecekan semua halaman, tombol, formulir, dan tampilan HP sebelum kampanye iklan.</td><td class="r price">Rp750.000</td></tr>
+    </table>
+  </div>
+
+  <div class="tier avoid">
+    <h3>Prioritas 2 — Saluran pendaftaran digital (Paket Menyeluruh, sesuai proposal)</h3>
+    <table>
+      <tr><th>Layanan</th><th class="r">Sekali bayar</th><th class="r">Bulanan</th></tr>
+      <tr><td>3 Landing page (Kuliah D3 Plus, Study Tour, Kursus Mandarin)</td><td class="r">Rp450.000</td><td class="r">Rp450.000</td></tr>
+      <tr><td>Setup Google Ads, Meta Ads, TikTok Ads</td><td class="r">Rp850.000</td><td class="r">–</td></tr>
+      <tr><td>3 Akun iklan atas nama PT UOS</td><td class="r">Rp1.500.000</td><td class="r">–</td></tr>
+      <tr><td>Channel YouTube (bangun + kelola 4 video/bln)</td><td class="r">Rp500.000</td><td class="r">Rp750.000</td></tr>
+      <tr><td>CRM calon siswa</td><td class="r">Rp2.500.000</td><td class="r">Rp400.000</td></tr>
+      <tr><td>Kelola Instagram &amp; Facebook (20 konten/bln)</td><td class="r">–</td><td class="r">Rp500.000</td></tr>
+      <tr><td>Artikel blog rutin</td><td class="r">–</td><td class="r">Rp1.000.000</td></tr>
+      <tr><td><b>Total (tanpa perbaikan situs yang sudah dibayar)</b></td><td class="r price">Rp5.800.000</td><td class="r price">Rp3.100.000</td></tr>
+    </table>
+    <p class="small muted" style="margin-top:6px">Total Paket Menyeluruh di proposal: Rp7.300.000 sekali bayar, termasuk perbaikan situs Rp1.500.000 yang sudah dibayar UOS. Bayar biaya bulanan di muka: 6 bulan diskon 10%, 12 bulan diskon 20%. Anggaran iklan dibayar langsung ke platform. Harga proposal berlaku hingga 19 Oktober 2026.</p>
+  </div>
+
+  <div class="tier avoid">
+    <h3>Tambahan — CRM AI WhatsApp (asisten 24 jam)</h3>
+    <p>Menjawab pertanyaan calon siswa dan orang tua kapan saja, mencatat data ke CRM, lalu meneruskannya ke tim UOS. Rincian ada di proposal hal. 9–15.</p>
+    <p class="price" style="margin-bottom:2px">Rp4.700.000 sekali bayar + Rp850.000/bln</p><p class="muted small">Belum termasuk biaya AI dan pesan WhatsApp resmi, yang dibayar langsung ke penyedia.</p>
+  </div>
+
+  <div class="tier avoid">
+    <h3>Prioritas 3 — Visibilitas jangka panjang</h3>
+    <table>
+      <tr><th>Layanan</th><th>Alasan</th><th class="r">Biaya</th></tr>
+      <tr><td>SEO Growth (6 bulan)</td><td>Sekarang situs sudah bisa diindeks Google. SEO membantu UOS muncul untuk pencarian seperti "kuliah D3 di China".</td><td class="r price">Rp1.500.000</td></tr>
+      <tr><td>Google Business Profile (kantor APL Tower)</td><td>UOS tampil di Google Maps dan pencarian lokal.</td><td class="r price">Rp350.000 + Rp100.000/bln</td></tr>
+      <tr><td>Email Marketing</td><td>Menjaga komunikasi dengan calon yang belum siap mendaftar.</td><td class="r price">Rp300.000 + Rp200.000/bln</td></tr>
+      <tr><td>Website Yayasan BAIK / Pusat Bahasa Mandarin</td><td>Melengkapi ekosistem UOS (proposal hal. 12).</td><td class="r price">mulai Rp2,5 jt</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="break">
+  <h2><span class="num">9</span>Opsi Desain Ulang Tampilan (Redesign)</h2>
+  <p>Perbaikan tahap 1 membuat situs aman dan jauh lebih cepat, tetapi tampilan dan susunannya masih mengikuti template lama. Slider besar di halaman depan menjadi penyebab utama tampilan di HP masih ±9 detik. Desain ulang akan membuat uos.co.id <b>dirancang khusus untuk HP dan untuk menangkap calon siswa</b>. Domain, hosting, dan konten tetap milik UOS, dan hasil perbaikan tahap 1 tetap terpakai.</p>
+  <table>
+    <tr><th>Pilihan</th><th>Cakupan</th><th class="r">Biaya awal</th><th class="r">Bulanan</th></tr>
+    <tr><td>Desain UI/UX (Figma)</td><td>Rancangan tampilan baru saja. Pemasangan ke website terpisah.</td><td class="r">Rp1.500.000</td><td class="r">–</td></tr>
+    <tr><td><b>Paket Pendidikan — Website</b> <span class="tag ok">Disarankan</span></td><td>Desain &amp; pembangunan ulang website lembaga pendidikan, termasuk pemeliharaan bulanan (update, backup, keamanan)</td><td class="r price">Rp3.500.000</td><td class="r price">Rp450.000</td></tr>
+    <tr><td>Paket Kampus — Website</td><td>Skala besar, untuk menampilkan seluruh lini UOS (vokasi, study tour, Mandarin, Yayasan BAIK, dll.)</td><td class="r">Rp5.000.000</td><td class="r">Rp650.000</td></tr>
+  </table>
+  <h3>Keuntungan redesign</h3>
+  <ul>
+    <li>Tampilan dirancang untuk HP. Target waktu tampil di bawah 4 detik.</li>
+    <li>Tidak lagi bergantung pada plugin premium yang tidak berlisensi</li>
+    <li>Formulir, tombol WhatsApp, dan pelacakan iklan dirancang sejak awal</li>
+    <li>Pemeliharaan rutin, sehingga kejadian seperti sertifikat mati berbulan-bulan tidak terulang</li>
+  </ul>
+  <p><b>Estimasi pengerjaan:</b> ±2–3 minggu (brief &amp; materi 2–3 hari · desain &amp; revisi 5–7 hari · pembangunan &amp; uji di staging 5–7 hari · peluncuran 1 hari). Disarankan selesai <b>sebelum iklan dijalankan</b>.</p>
+  <p class="small muted">Harga mengikuti daftar resmi SITUNEO di situneo.my.id. Rincian jumlah halaman dan fitur mengikuti detail paket.</p>
+</section>
+
+<div class="foot avoid">
+  <div><b>SITUNEO Digital Solusi Indonesia</b><br>Jakarta Timur · situneo.my.id</div>
+  <div><b>Kontak</b><br>Muhammad Firaz · 0821-8188-396 (WhatsApp) · sales@situneo.my.id</div>
+</div>
+
+</body>
+</html>
