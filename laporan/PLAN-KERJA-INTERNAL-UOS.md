@@ -24,11 +24,11 @@
 | 10 | Anti-spam formulir (Honeypot) + pesan formulir bahasa Indonesia | ✅ Selesai (29 Sep, terverifikasi live) | – |
 | 11 | Formulir di Beranda (bagian "Hubungi Kami" yang sebelumnya tanpa form) + link WA di kotak "Chat WA Kami" | ✅ Selesai (29 Sep, tes kirim OK) | – |
 | 12 | Tampilan link WhatsApp (Open Graph) via Rank Math (Yoast tidak kompatibel WP 6.7.9) + Local SEO data perusahaan | ✅ Selesai (29 Sep, tes WA OK) | – |
-| 13 | **GA4 + Google Tag Manager** | ⏳ Menunggu akses Google UOS | 1 jam |
-| 14 | Meta & TikTok Pixel | ⏳ Menunggu akun iklan UOS | 30 menit |
+| 13 | **GA4 + Google Tag Manager** | ⏳ Menunggu email Google UOS (opsi: pasang di akun SITUNEO lalu serahkan) | 1 jam |
+| 14 | Meta & TikTok Pixel | ⏳ Saat UOS mulai iklan | 30 menit |
 | 15 | Bersihkan 322 komentar spam + tutup komentar & pingback | ✅ Selesai (29 Sep) | – |
 | 16 | Nonaktifkan halaman contoh (sample-page, template → Draft, kini 404) | ✅ Selesai (29 Sep, terverifikasi live) | – |
-| 17 | Uji akhir + PageSpeed akhir + laporan serah terima | ⏳ Belum | 1 jam |
+| 17 | Uji akhir + PageSpeed akhir (HP 65 / Desktop 68, SEO 92, BP 100) + laporan serah terima | ✅ Selesai (29 Sep) | – |
 
 **Total sisa kerja: ±1–1,5 hari kerja efektif.**
 
